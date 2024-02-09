@@ -7,7 +7,11 @@ var a = 10
 func _ready():
 	#IMPRESSÃO DOS VALORES DAS VARIAVEIS
 	print(a)
-	a= 100
+	a = 100
 	print(a)
 	a = 1000
 	print(a)
+        soma(10)
+
+func soma(b):
+        print(a+b)
