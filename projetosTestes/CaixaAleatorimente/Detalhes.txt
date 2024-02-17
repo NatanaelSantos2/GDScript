@@ -1,3 +1,3 @@
 Para quem tem um bom entendimetno na godot vai indentificar o procedimento de Node.
 
-esse projeto gera um lugar ja definido aleatoriamente, dentro de um tamplete(img).
+esse projeto gera um lugar ja definido aleatoriamente, para objetos, dentro de um tamplete(img). Basta adaptar dentro da tela que ja vem definida na godot.
