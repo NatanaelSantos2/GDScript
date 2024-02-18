@@ -32,69 +32,69 @@ func _process(_delta):
 				caixa_linha_1.position.y = 144
 				listNumAleatorio.append(valorAleatorio)
 				caixa1 += 1
-				
-			for b in range(0, listNumAleatorio.size()):
-				if listNumAleatorio[b] != valorAleatorio:
-					for c in range(0, list1.size()):
-						if  c == valorAleatorio && caixa2 < 1:
-							caixa_linha_2.position.x = list1[c]
-							caixa_linha_2.position.y = 235
-							listNumAleatorio.append(valorAleatorio)
-							caixa2 += 1
-							
-				for d in range(0, listNumAleatorio.size()):
-					if listNumAleatorio[d] != valorAleatorio:
-						for e in range(1, listNumAleatorio.size()):
-							if listNumAleatorio[e] != valorAleatorio:
-								for f in range(0, list1.size()):
-									if f == valorAleatorio && caixa3 < 1:
-										caixa_linha_3.position.x = list1[f]
-										caixa_linha_3.position.y = 324
-										listNumAleatorio.append(valorAleatorio)
-										caixa3 += 1
-					
-					for g in range(0, listNumAleatorio.size()):
-						if listNumAleatorio[g] != valorAleatorio:
-							for h in range(1, listNumAleatorio.size()):
-								if listNumAleatorio[h] != valorAleatorio:
-									for i in range(2, listNumAleatorio.size()):
-										if listNumAleatorio[i] != valorAleatorio:
-											for j in range(0, list1.size()):
-												if j == valorAleatorio && caixa4 < 1:
-													caixa_linha_4.position.x = list1[j]
-													caixa_linha_4.position.y = 415
-													listNumAleatorio.append(valorAleatorio)
-													caixa4 += 1
-													
-						for l in range(0, listNumAleatorio.size()):
-							if listNumAleatorio[l] != valorAleatorio:
-								for m in range(1, listNumAleatorio.size()):
-									if listNumAleatorio[m] != valorAleatorio:
-										for n in range(2, listNumAleatorio.size()):
-											if listNumAleatorio[n] != valorAleatorio:
-												for o in range(3, listNumAleatorio.size()):
-													if listNumAleatorio[o] != valorAleatorio:
-														for j in range(0, list1.size()):
-															if j == valorAleatorio && caixa5 < 1:
-																caixa_linha_5.position.x = list1[j]
-																caixa_linha_5.position.y = 506
-																listNumAleatorio.append(valorAleatorio)
-																caixa5 += 1
-							for t in range(0, listNumAleatorio.size()):
-								if listNumAleatorio[t] != valorAleatorio:
-									for m in range(1, listNumAleatorio.size()):
-										if listNumAleatorio[m] != valorAleatorio:
-											for n in range(2, listNumAleatorio.size()):
-												if listNumAleatorio[n] != valorAleatorio:
-													for o in range(3, listNumAleatorio.size()):
-														if listNumAleatorio[o] != valorAleatorio:
-															for y in range(4, listNumAleatorio.size()):
-																if listNumAleatorio[y] != valorAleatorio:
-																	for j in range(0, list1.size()):
-																		if j == valorAleatorio && caixa6 < 1:
-																			caixa_linha_6.position.x = list1[j]
-																			caixa_linha_6.position.y = 596
-																			listNumAleatorio.append(valorAleatorio)
-																			caixa6 += 1
-
+		if caixa1 == 1:
+			caixaAl2()
 		contTentativas += 1
+
+func caixaAl2():
+	if listNumAleatorio[0] != valorAleatorio:
+		for c in range(0, list1.size()):
+			if  c == valorAleatorio && caixa2 < 1:
+				caixa_linha_2.position.x = list1[c]
+				caixa_linha_2.position.y = 235
+				listNumAleatorio.append(valorAleatorio)
+				caixa2 += 1
+		if caixa2 == 1:
+			caixaAl3()
+
+func caixaAl3():
+	if listNumAleatorio[0] != valorAleatorio:
+		if listNumAleatorio[1] != valorAleatorio:
+			for f in range(0, list1.size()):
+				if f == valorAleatorio && caixa3 < 1:
+					caixa_linha_3.position.x = list1[f]
+					caixa_linha_3.position.y = 324
+					listNumAleatorio.append(valorAleatorio)
+					caixa3 += 1
+			if caixa2 == 1:
+				caixaAl4()
+
+func caixaAl4():
+	if listNumAleatorio[0] != valorAleatorio:
+		if listNumAleatorio[1] != valorAleatorio:
+			if listNumAleatorio[2] != valorAleatorio:
+				for j in range(0, list1.size()):
+					if j == valorAleatorio && caixa4 < 1:
+						caixa_linha_4.position.x = list1[j]
+						caixa_linha_4.position.y = 415
+						listNumAleatorio.append(valorAleatorio)
+						caixa4 += 1
+				if caixa4 == 1:
+					caixaAl5()
+
+func caixaAl5():
+	if listNumAleatorio[0] != valorAleatorio:
+		if listNumAleatorio[1] != valorAleatorio:
+			if listNumAleatorio[2] != valorAleatorio:
+				if listNumAleatorio[3] != valorAleatorio:
+						for u in range(0, list1.size()):
+							if u == valorAleatorio && caixa5 < 1:
+								caixa_linha_5.position.x = list1[u]
+								caixa_linha_5.position.y = 506
+								listNumAleatorio.append(valorAleatorio)
+								caixa5 += 1
+						if caixa5 == 1:
+							caixaAl6()
+
+func caixaAl6():
+	if listNumAleatorio[0] != valorAleatorio:
+		if listNumAleatorio[1] != valorAleatorio:
+			if listNumAleatorio[2] != valorAleatorio:
+				if listNumAleatorio[3] != valorAleatorio:
+					if listNumAleatorio[4] != valorAleatorio:
+						for b in range(0, list1.size()):
+							if b == valorAleatorio && caixa6 < 1:
+								caixa_linha_6.position.x = list1[b]
+								caixa_linha_6.position.y = 596
+								listNumAleatorio.append(valorAleatorio)
+								caixa6 += 1
