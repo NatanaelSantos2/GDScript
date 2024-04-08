@@ -34,6 +34,7 @@ func _process(_delta) -> void:
 				caixa_linha_1.position.y = 144
 				listNumAleatorio.append(valorAleatorio)
 				caixa1 += 1
+			
 		if caixa1 == 1:
 			caixaAl2()
 		contTentativas += 1
@@ -94,18 +95,24 @@ func caixaAl6() -> void:
 			if listNumAleatorio[2] != valorAleatorio:
 				if listNumAleatorio[3] != valorAleatorio:
 					if listNumAleatorio[4] != valorAleatorio:
-						for b in range(0, list1.size()):
-							if b == valorAleatorio && caixa6 < 1:
-								caixa_linha_6.position.x = list1[b]
-								caixa_linha_6.position.y = 596
-								listNumAleatorio.append(valorAleatorio)
-								caixa6 += 1
-						if caixa6 == 1:
-							portalSaida()
-#portal
+						if valorAleatorio != 6:
+							for b in range(0, list1.size()):
+									caixa_linha_6.position.x = list1[b]
+									caixa_linha_6.position.y = 596
+									listNumAleatorio.append(valorAleatorio)
+									caixa6 += 1
+							if caixa6 == 1:
+								portalSaida()
+
 func portalSaida() -> void:
 	for l in range(0, list1.size()):
 		if l == valorAleatorio:
 			portal.position.x = list1[l]
 			portal.position.y = 54
 			listNumAleatorio.append(valorAleatorio)
+
+#sistema de adicionar mais caixars
+func _on_carro_cont_ponto(pontos):
+	if pontos > 50:
+		#print('Teste caixas',pontos)
+		pass
