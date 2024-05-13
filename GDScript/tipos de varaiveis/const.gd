@@ -12,3 +12,5 @@ func _ready():
 	print('Variavel -> ',a)
 	print('Constante -> ',b)
 	print('Poder -> ',poder)
+
+#teste
